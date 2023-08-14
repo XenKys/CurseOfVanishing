@@ -11,9 +11,9 @@ Download the JAR file from the [latest release](https://github.com/XenKys/CurseO
 ## Configuration file example
 
 ```yaml
-fakeJoinMessage: §aJoin > {player}
-fakeLeftMessage: §cQuit > {player}
-inVanishJoinMessage: §a{player} joined the game in vanish
-inVanishLeftMessage: §a{player} left the game in vanish
-inVanishDeadMessage: §a{player} dead in vanish
+fakeJoinMessage: "§aJoin > {player}"
+fakeLeftMessage: "§cQuit > {player}"
+inVanishJoinMessage: "§a{player} joined the game in vanish"
+inVanishLeftMessage: "§a{player} left the game in vanish"
+inVanishDeadMessage: "§a{player} dead in vanish"
 ```
