@@ -81,7 +81,7 @@ public class VanishEvents implements Listener {
 
         if (clickedBlock == null) return;
 
-        if (event.getAction() != Action.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (player.getInstance().isSneaking() && player.getInstance().getItemInHand() != null && player.getInstance().getItemInHand().getType() != Material.AIR) return;
             if (clickedBlock.getType() == Material.ENDER_CHEST) {
                 event.setCancelled(true);
