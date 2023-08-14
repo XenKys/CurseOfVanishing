@@ -26,7 +26,7 @@ public class VanishPlayer {
                     p.hidePlayer(plugin, player);
                 }
 
-                if (p.hasPermission("curseofvanishing.vanish.read")) {
+                if (p.hasPermission("curseofvanishing.vanish.read") && p != getInstance()) {
                     p.sendMessage("§a" + player.getName() + " enabled the vanish");
                 }
             }
@@ -44,7 +44,7 @@ public class VanishPlayer {
                     p.showPlayer(plugin, player);
                 }
 
-                if (p.hasPermission("curseofvanishing.vanish.read")) {
+                if (p.hasPermission("curseofvanishing.vanish.read") && p != getInstance()) {
                     p.sendMessage("§a" + player.getName() + " disabled the vanish");
                 }
             }
