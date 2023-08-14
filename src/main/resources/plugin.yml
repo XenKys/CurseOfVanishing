@@ -1,0 +1,4 @@
+name: CurseOfVanishing
+version: '${project.version}'
+main: me.xenkys.curseofvanishing.Main
+api-version: '1.20'
