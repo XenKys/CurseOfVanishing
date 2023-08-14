@@ -27,7 +27,7 @@ public class VanishPlayer {
                 }
 
                 if (p.hasPermission("curseofvanishing.vanish.read")) {
-                    p.sendMessage("@a" + player.getName() + " enabled the vanish");
+                    p.sendMessage("§a" + player.getName() + " enabled the vanish");
                 }
             }
 
@@ -45,7 +45,7 @@ public class VanishPlayer {
                 }
 
                 if (p.hasPermission("curseofvanishing.vanish.read")) {
-                    p.sendMessage("@a" + player.getName() + " disabled the vanish");
+                    p.sendMessage("§a" + player.getName() + " disabled the vanish");
                 }
             }
 

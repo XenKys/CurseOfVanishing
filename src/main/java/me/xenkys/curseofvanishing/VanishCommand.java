@@ -58,7 +58,11 @@ public class VanishCommand implements CommandExecutor {
                 target.getInstance().sendMessage(target.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
             }
         } else if (sender instanceof ConsoleCommandSender) {
-            if (args[0].equals("list")) {
+            if (args.length == 0) {
+                sender.sendMessage("§cYou don't entered the nickname of a player!");
+
+                return true;
+            } else if (args[0].equals("list")) {
                 ArrayList<UUID> vanishedPlayers = VanishManager.players;
 
                 if (vanishedPlayers.size() == 0) {

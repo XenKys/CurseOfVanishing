@@ -1,5 +1,5 @@
-fakeJoinMessage: "{player} joined the game"
-fakeLeftMessage: "{player} left the game"
+fakeJoinMessage: "§e{player} joined the game"
+fakeLeftMessage: "§e{player} left the game"
 inVanishJoinMessage: "§a{player} joined the game in vanish"
 inVanishLeftMessage: "§a{player} left the game in vanish"
 inVanishDeadMessage: "§a{player} dead in vanish"
