@@ -22,7 +22,7 @@ public class VanishCommand implements CommandExecutor {
             } else if (args[0].equals("list")) {
                 ArrayList<UUID> vanishedPlayers = VanishManager.players;
 
-                if (vanishedPlayers.size() == 0) {
+                if (vanishedPlayers.isEmpty()) {
                     sender.sendMessage("§cThere are no vanished players!");
 
                     return true;
@@ -65,7 +65,7 @@ public class VanishCommand implements CommandExecutor {
             } else if (args[0].equals("list")) {
                 ArrayList<UUID> vanishedPlayers = VanishManager.players;
 
-                if (vanishedPlayers.size() == 0) {
+                if (vanishedPlayers.isEmpty()) {
                     sender.sendMessage("§cThere are no vanished players!");
 
                     return true;
