@@ -135,9 +135,9 @@ public class VanishEvents implements Listener {
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (!p.hasPermission("curseofvanishing.vanish.see")) {
-                p.showPlayer(plugin, player.getInstance());
+                p.showPlayer(plugin, player.getPlayerInstance());
             } else if (p.hasPermission("curseofvanishing.vanish.read")) {
-                p.sendMessage(plugin.getConfig().getString("inVanishJoinMessage").replace("{player}", player.getInstance().getName()));
+                p.sendMessage(plugin.getConfig().getString("inVanishJoinMessage").replace("{player}", player.getPlayerInstance().getName()));
             }
         }
     }
@@ -152,9 +152,9 @@ public class VanishEvents implements Listener {
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (!p.hasPermission("curseofvanishing.vanish.see")) {
-                p.showPlayer(plugin, player.getInstance());
+                p.showPlayer(plugin, player.getPlayerInstance());
             } else if (p.hasPermission("curseofvanishing.vanish.see.read")) {
-                p.sendMessage(plugin.getConfig().getString("inVanishLeftMessage").replace("{player}", player.getInstance().getName()));
+                p.sendMessage(plugin.getConfig().getString("inVanishLeftMessage").replace("{player}", player.getPlayerInstance().getName()));
             }
         }
     }
@@ -171,7 +171,7 @@ public class VanishEvents implements Listener {
 
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (p.hasPermission("curseofvanishing.vanish.read")) {
-                p.sendMessage(plugin.getConfig().getString("inVanishDeadMessage").replace("{player}", player.getInstance().getName()));
+                p.sendMessage(plugin.getConfig().getString("inVanishDeadMessage").replace("{player}", player.getPlayerInstance().getName()));
             }
         }
     }
