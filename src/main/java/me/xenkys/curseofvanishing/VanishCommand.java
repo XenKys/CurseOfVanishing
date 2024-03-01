@@ -18,7 +18,7 @@ public class VanishCommand implements CommandExecutor {
                 VanishPlayer player = new VanishPlayer(p);
 
                 player.setVanish(!player.isVanished());
-                player.getInstance().sendMessage(player.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
+                player.getPlayerInstance().sendMessage(player.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
             } else if (args[0].equals("list")) {
                 ArrayList<UUID> vanishedPlayers = VanishManager.players;
 
@@ -42,20 +42,20 @@ public class VanishCommand implements CommandExecutor {
             } else {
                 VanishPlayer target = new VanishPlayer(Bukkit.getPlayer(args[0]));
 
-                if (target.getInstance() == null) {
+                if (target.getPlayerInstance() == null) {
                     sender.sendMessage("§cThe player " + args[0] + " doesn't exists!");
 
                     return true;
                 }
 
-                if (!target.getInstance().isOnline()) {
-                    sender.sendMessage("§cThe player " + target.getInstance().getName() + " isn't online!");
+                if (!target.getPlayerInstance().isOnline()) {
+                    sender.sendMessage("§cThe player " + target.getPlayerInstance().getName() + " isn't online!");
 
                     return true;
                 }
 
                 target.setVanish(!target.isVanished());
-                target.getInstance().sendMessage(target.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
+                target.getPlayerInstance().sendMessage(target.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
             }
         } else if (sender instanceof ConsoleCommandSender) {
             if (args.length == 0) {
@@ -85,20 +85,20 @@ public class VanishCommand implements CommandExecutor {
             } else {
                 VanishPlayer target = new VanishPlayer(Bukkit.getPlayer(args[0]));
 
-                if (target.getInstance() == null) {
+                if (target.getPlayerInstance() == null) {
                     sender.sendMessage("§cThe player " + args[0] + " doesn't exists!");
 
                     return true;
                 }
 
-                if (!target.getInstance().isOnline()) {
-                    sender.sendMessage("§cThe player " + target.getInstance().getName() + " isn't online!");
+                if (!target.getPlayerInstance().isOnline()) {
+                    sender.sendMessage("§cThe player " + target.getPlayerInstance().getName() + " isn't online!");
 
                     return true;
                 }
 
                 target.setVanish(!target.isVanished());
-                target.getInstance().sendMessage(target.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
+                target.getPlayerInstance().sendMessage(target.isVanished() ? "§aVanish enabled" : "§aVanish disabled");
             }
         }
 

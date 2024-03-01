@@ -82,10 +82,10 @@ public class VanishEvents implements Listener {
         if (clickedBlock == null) return;
 
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (player.getInstance().isSneaking() && player.getInstance().getItemInHand() != null && player.getInstance().getItemInHand().getType() != Material.AIR) return;
+            if (player.getPlayerInstance().isSneaking() && player.getPlayerInstance().getItemInHand() != null && player.getPlayerInstance().getItemInHand().getType() != Material.AIR) return;
             if (clickedBlock.getType() == Material.ENDER_CHEST) {
                 event.setCancelled(true);
-                player.getInstance().openInventory(player.getInstance().getEnderChest());
+                player.getPlayerInstance().openInventory(player.getPlayerInstance().getEnderChest());
             }
             if (clickedBlock.getType() != Material.CHEST || clickedBlock.getType() != Material.TRAPPED_CHEST || clickedBlock.getType() != Material.ENDER_CHEST || clickedBlock.getType() != Material.BARREL || !clickedBlock.getType().toString().endsWith(Material.SHULKER_BOX.toString())) return;
             if (!(clickedBlock.getState() instanceof InventoryHolder)) return;
@@ -97,7 +97,7 @@ public class VanishEvents implements Listener {
             Inventory clonedInventory = Bukkit.createInventory(null, inventory.getInventory().getSize(), clickedBlock.getType().toString());
             clonedInventory.setContents(inventory.getInventory().getContents());
 
-            player.getInstance().openInventory(clonedInventory);
+            player.getPlayerInstance().openInventory(clonedInventory);
         } else if (event.getAction() == Action.PHYSICAL) {
             if (!clickedBlock.getType().toString().endsWith("PRESSURE_PLATE") || !clickedBlock.getType().toString().startsWith("TRIPWIRE") || clickedBlock.getType() != Material.SCULK_SENSOR || clickedBlock.getType() != Material.SCULK_SHRIEKER || clickedBlock.getType() != Material.TURTLE_EGG || clickedBlock.getType() != Material.BIG_DRIPLEAF) return;
 

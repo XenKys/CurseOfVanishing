@@ -11,12 +11,12 @@ public class VanishPlayer {
         this.player = player;
     }
 
-    public Player getInstance() {
+    public Player getPlayerInstance() {
         return player;
     }
 
     public boolean isVanished() {
-        return VanishManager.has(getInstance().getUniqueId());
+        return VanishManager.has(getPlayerInstance().getUniqueId());
     }
 
     public void setVanish(Boolean enabled) {
@@ -26,7 +26,7 @@ public class VanishPlayer {
                     p.hidePlayer(plugin, player);
                 }
 
-                if (p.hasPermission("curseofvanishing.vanish.read") && p != getInstance()) {
+                if (p.hasPermission("curseofvanishing.vanish.read") && p != getPlayerInstance()) {
                     p.sendMessage("§a" + player.getName() + " enabled the vanish");
                 }
             }
@@ -44,7 +44,7 @@ public class VanishPlayer {
                     p.showPlayer(plugin, player);
                 }
 
-                if (p.hasPermission("curseofvanishing.vanish.read") && p != getInstance()) {
+                if (p.hasPermission("curseofvanishing.vanish.read") && p != getPlayerInstance()) {
                     p.sendMessage("§a" + player.getName() + " disabled the vanish");
                 }
             }
