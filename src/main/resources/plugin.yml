@@ -1,0 +1,11 @@
+name: CurseOfVanishing
+version: 1.0.0
+main: me.xenkys.curseofvanishing.CurseOfVanishing
+api-version: "1.21"
+commands:
+  vanish:
+    description: Vanish command
+    usage: /<command>
+    permission: cov.vanish.use
+    aliases:
+      - v
